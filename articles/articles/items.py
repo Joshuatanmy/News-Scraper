@@ -4,10 +4,17 @@
 # https://docs.scrapy.org/en/latest/topics/items.html
 
 from dataclasses import dataclass
+import scrapy
 
 
-@dataclass
-class ArticlesItem:
+class ArticlesItem(scrapy.Item):
     # define the fields for your item here like:
     # name: str | None = None
-    pass
+    title = scrapy.Field()
+    url = scrapy.Field()
+    date = scrapy.Field()
+    author = scrapy.Field()
+    body = scrapy.Field()
+    tag = scrapy.Field()
+    
+
