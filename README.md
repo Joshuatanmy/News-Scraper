@@ -13,6 +13,7 @@ Build data visualisations that take data stored to be analysed.
 Future project expansion:
 news articles can be fed through text analysis NN to identify topics of each news article used to classify articles by topic.
 ML model used to predict visibility/traffic of an article based on keywords, topics, or any other factors identified.
+Sentiment analysis of comments on article.
 
 
 Project Author:
