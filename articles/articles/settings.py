@@ -7,6 +7,9 @@
 #     https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 
+import os
+from dotenv import load_dotenv
+
 BOT_NAME = "articles"
 
 SPIDER_MODULES = ["articles.spiders"]
@@ -85,3 +88,13 @@ DOWNLOAD_DELAY = 1
 
 # Set settings whose default value is deprecated to a future-proof value
 FEED_EXPORT_ENCODING = "utf-8"
+
+# Load the environment variables from the .env file
+load_dotenv()
+
+# Connect to MongoDB Database
+MONGO_URI = os.getenv("DATABASE_CONNECTION_STRING")
+MONGO_DATABASE = os.getenv("DATABASE_NAME")
+
+LOG_LEVEL = "WARNING"
+LOG_FILE = "book_scraper.log"
